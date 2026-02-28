@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+</head>
+<body>
+    <div class="all-product" id="all-products">
+         <div>
+            <h2 class="name">phone</h2>
+            <button class="buy-button">Buy</button>
+         </div>
+         <div>
+            <h2 class="name">watch</h2>
+            <button class="buy-button">Buy</button>
+         </div>
+         <div>
+            <h2 class="name">headphone</h2>
+            <button class="buy-button">Buy</button>
+         </div>
+
+    </div>
+    <script>
+        let prouctArr =[];
+       const buyButoon = document.getElementById('all-products').addEventListener('click',function(event){
+       if(event.target.classList.contains('buy-button')){
+        const parentNode = event.target.parentNode;
+        const name =parentNode.querySelector('.name').innerText;
+        const productObj ={
+            name
+        }
+        
+        const exist =  prouctArr.find(element =>(element.name == productObj.name) )
+
+        if(!exist){
+            prouctArr.push(productObj)
+        }
+        else{
+            console.log('alreday exist');
+            
+        }
+        console.log(prouctArr);
+        
+        
+       }
+
+       })
+    </script>
+</body>
+</html>
+
