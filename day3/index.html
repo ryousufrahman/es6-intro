@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .post-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns:repeat(3 ,1fr);
+            gap: 20px
+            
+        }
+        .post{
+            border: 1px solid gray ;
+            padding: 20px;
+            border-radius: 20px;
+            
+        }
+        .post p{
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <button onclick="loadData()">Load Date</button>
     <button onclick="loadpost()">display post</button>
-    <ul id="ul-contianer"></ul>
+    <div id="post-container" class="post-container">
+        
+
+    </div>
     <script src="jason.js"></script>
     <script src="fatch.js"></script>
     <script src="loadPost.js"></script>
