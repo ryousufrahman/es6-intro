@@ -3,10 +3,13 @@ const loadpost =()=>{
     .then(allpost=> allpost.json())
     .then(data =>display(data) )
 }
-
+ const ulcontainer =document.getElementById('ul-contianer')
 const display =(posts)=>{
     posts.forEach(element => {
-        console.log(element)
+        
+        const li =document.createElement('li')
+        li.innerText = element.body
+        ulcontainer.appendChild(li)
         
     });
 
